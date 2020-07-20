@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  background-color: #f5f3f7;
+  overflow-x: hidden;
+  color: white;
+  background: #f5f3f7;
+  display: grid;
+  line-height: 1.3;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+  }
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  border: none;
+  color: inherit;
+}
+
+.bg-block {
+  width: 40rem;
+  height: 90vh;
+  background-image: linear-gradient(to bottom, #e942ff, #8838ff);
+  position: absolute;
+  top: 0;
+  left: -24rem;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+}
+
+@media only screen and (min-width: 800px) {
+  .bg-block {
+    left: -14rem;
+    width: 45rem;
+  }
+}
+
+.bg-block--2 {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .bg-block--2 {
+    display: block;
+    background-image: unset;
+    background-color: #f5f3f7;
+    bottom: 0rem;
+    right: -22rem;
+    top: unset;
+    left: unset;
+    border-radius: 50% 50% 0 0;
+  }
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.phone {
+  background: white;
+  color: #d89eff;
+  width: 340px;
+  height: 640px;
+  border-radius: 36px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  transform: scale(0.9);
+}
+
+@media only screen and (min-width: 800px) {
+  .phone {
+    transform: scale(0.8);
+    box-shadow: 5px 5px 3rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.phone::before {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  height: 36px;
+  width: 50%;
+  border-radius: 24px;
+  position: absolute;
+}
+
+.screen {
+  background-color: #f5f3f7;
+  width: 90%;
+  height: 95%;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.screen__top {
+  display: flex;
+  align-items: flex-end;
+  background-image: linear-gradient(to left, #e942ff, #8838ff);
+  border-radius: 30px 30px 12px 12px;
+  height: 78px;
+  padding: 0 12px 12px 12px;
+  color: #d89eff;
+}
+
+.screen__top button {
+  position: relative;
+  bottom: 12px;
+  color: white;
+}
+
+.screen__recipient {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.screen__recipient-img {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.screen__name {
+  color: white;
+}
+
+.screen__name span {
+  display: block;
+  font-size: 80%;
+  color: #d89eff;
+  font-weight: normal;
+}
+
+.screen__chat {
+  padding: 12px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.screen__bot {
+  background: white;
+  margin-bottom: 15px;
+  width: 90%;
+  justify-self: center;
+  height: 45px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.screen__input {
+  border: none;
+  height: 100%;
+  background: none;
+  padding-left: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+}
+
+.screen__send {
+  background-color: #3e2753;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.msg {
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.msgLeft {
+  background-color: #e8e3ed;
+  color: #9241c8;
+  width: 180px;
+}
+
+.msgRight {
+  background-color: white;
+  color: #6e5d7e;
+  max-width: 180px;
+  justify-self: end;
+}
+
+.specialMsg {
+  background-image: linear-gradient(to left, #e942ff, #8838ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 210px;
+  padding: 10px 12px;
+}
+
+.specialMsg label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+}
+
+.specialMsg input {
+  display: none;
+}
+
+.specialMsg .service {
+  flex: 1;
+}
+
+.specialMsg .price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.photos {
+  justify-self: end;
+}
+
+.photos .photo {
+  width: 50px;
+  height: 50px;
+  margin-left: 7px;
+  border-radius: 10px;
+}
+
+.main {
+  color: #3e2753;
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .main {
+    justify-self: start;
+    text-align: left;
+  }
+}
+
+.main__title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.main__para {
+  width: 80%;
+  margin: auto;
+  line-height: 1.5;
+  color: #a39daa;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 800px) {
+  .main__para {
+    width: 90%;
+    margin: unset;
+  }
+}

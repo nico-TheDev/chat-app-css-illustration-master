@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Chat App</title>
+
+        <link rel="stylesheet" href="./src/css/style.css" />
+
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+            integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="bg-block"></div>
+        <div class="bg-block bg-block--2"></div>
+
+        <div class="container">
+            <div class="phone">
+                <div class="screen">
+                    <div class="screen__top">
+                        <button class="screen__back">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <div class="screen__recipient">
+                            <img
+                                src="./images/avatar.jpg"
+                                alt=""
+                                class="screen__recipient-img"
+                            />
+                            <h3 class="screen__name">
+                                Samuel Green
+                                <span class="screen__subname"
+                                    >Available to Walk</span
+                                >
+                            </h3>
+                        </div>
+
+                        <button class="screen__kebab">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+
+                    <div class="screen__chat">
+                        <p class="msg msgLeft">
+                            That sounds great. I'd be happy to discuss more.
+                        </p>
+                        <p class="msg msgLeft">
+                            Could you send some pictures of your dog please?
+                        </p>
+
+                        <div class="photos">
+                            <img
+                                src="./images/dog-image-1.jpg"
+                                alt=""
+                                class="photo"
+                            />
+                            <img
+                                src="./images/dog-image-2.jpg"
+                                alt=""
+                                class="photo"
+                            />
+                            <img
+                                src="./images/dog-image-3.jpg"
+                                alt=""
+                                class="photo"
+                            />
+                        </div>
+
+                        <p class="msg msgRight">
+                            Here are a few pictures.She's a happy girl!
+                        </p>
+                        <p class="msg msgRight">
+                            Can you make it?
+                        </p>
+
+                        <p class="msg msgLeft">
+                            She looks so happy! The time we discussed works. How
+                            long shall I take her out for?
+                        </p>
+
+                        <p class="msg specialMsg msgLeft">
+                          <input type="radio" name="time" id="type1" />
+                          <label for="type1"> </label>
+
+                            <span class="service">30 minute walk</span>
+
+                            <span class="price">$29</span>
+                        </p>
+
+                        <p class="msg specialMsg msgLeft">
+                            <input type="radio" name="time" id="type2" />
+                            <label for="type2"> </label>
+                            <span class="service">1 hour walk</span>
+
+                            <span class="price">$49</span>
+                        </p>
+                    </div>
+
+                    <div class="screen__bot">
+                        <input
+                            type="text"
+                            placeholder="Type a message"
+                            class="screen__input"
+                        />
+                        <button class="screen__send">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <h1 class="main__title">Simple booking</h1>
+
+                <p class="main__para">
+                    Stay in touch with our dog walkers through the chat
+                    interface. This makes it easy to discuss arrangements and
+                    make bookings. Once the walk has been completed you can rate
+                    your walker and book again all through the chat.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
